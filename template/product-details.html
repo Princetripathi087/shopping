@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products |shopping.in</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container"></div>
+    <div class="topnav">
+        <a class="shopping" href="home.html"><b>shopping.in</b></a>
+        <input type="text" placeholder="Search..">
+        <a class="active" href="#home">Login</a>
+        <a class="active" href="#home">Cart</a>
+      </div>
+    </div>
+    <div class="navbar">
+        <nav>
+            <ul>
+                <li><a href="">Grocery</a></li>
+                <li><a href="">Mobiles</a></li>
+                <li><a href="">Fashion</a></li>
+                <li><a href="">Electronics</a></li>
+                <li><a href="">Home</a></li>
+                <li><a href="">Appliences</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+
+          <img src="Static/img4.jpg" style="width:100%">
+
+        </div>
+
+        <div class="mySlides fade">
+
+          <img src="Static/img2.jpg" style="width:100%">
+
+        </div>
+
+
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+
+      </div>
+    <!---------js for product gallery-------------->
+<script>
+    var ProductImg = document.getElementById("ProductImg");
+    var SmallImg = document.getElementByClassName("small-img");
+        SmallImg[0].onclick = function(){
+            ProductImg.src = SmallImg[0].src;
+          }
+        SmallImg[1].onclick = function(){
+            ProductImg.src = SmallImg[1].src;
+          }
+        SmallImg[2].onclick = function(){
+            ProductImg.src = SmallImg[2].src;
+          }
+        SmallImg[3].onclick = function(){
+            ProductImg.src = SmallImg[3].src;
+          }
+</script>
+
+
+      <script>
+      var slideIndex = 1;
+        showSlides(slideIndex);
+
+// Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+// Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+</script>
+<!---------------------------single product details----------->
+    <div class="small-container single-product">
+        <div class="row">
+            <div class="col-2">
+                <img src="images/xs-t322-blwh-seven-rocks-original-imafxhagbmz4mam5.jpeg" width="50%" id="ProductImg">
+                <div class="small-img-row">
+                <div class="small-img-col">
+                <img src="images/xs-t322-blwh-seven-rocks-original-imafxhagvpbgmrj2.jpeg" width="50%" class="small-img">
+                </div>
+                <div class="small-img-col">
+                <img src="images/xs-t322-blwh-seven-rocks-original-imafxhagtyj2xvpn.jpeg" width="50%" class="small-img">
+                </div>
+                <div class="small-img-col">
+                <img src="images/xs-t322-blwh-seven-rocks-original-imafxhagd9y5hn3q.jpeg" width="50%" class="small-img">
+                </div>
+                <div class="small-img-col">
+                <img src="images/xs-t322-blwh-seven-rocks-original-imafxhag7ggw5ana.jpeg" width="50%" class="small-img">
+                </div>
+
+                </div>
+            </div>
+
+
+
+            <div class="col-2">
+                <p>Home / T-shirt</p>
+                <h1>Color Block Men Round Neck T-shirt</h1>
+                <h4>$50.00</h4>
+                <select>
+                    <option>Select Size</option>
+                    <option>XXL</option>
+                    <option>XL</option>
+                    <option>Large</option>
+                    <option>Medium</option>
+                    <option>Small</option>
+                </select>
+                <input type="number" value="1">
+                <a href="" class="btn">Add To Cart</a>
+                <h3>Product Details <i class="fa fa-ident"</i></h3>
+                <br>
+                <p>Durable sticth and quality finish. Manufactured from cotton fabric, this T-shirt is very smooth and soft making it comfortable to wear during all seasons.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+<!------------------------------feature products--------------->
+    <div class="small-container">
+        <h2 class="title">Feature Products</h2>
+        <div class="row">
+            <div class="col-4">
+                <img src="https://rukminim1.flixcart.com/image/495/594/k01b8280/kurta/2/x/b/l-mens-kurta-cotton-white-tap-in-original-imafgwfztd7qyzhy.jpeg?q=50">
+                <h4>Men Self Design,<br> Solid Cotton<br> Linen Blend<br> Straight Kurta<br>  (White)</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>Rs-500.00</p>
+            </div>
+            <div class="col-4">
+                <img src="https://rukminim1.flixcart.com/image/495/594/kfvfwy80/ethnic-set/m/e/n/44-tkc3183s-tabard-original-imafw8hmqm2xmrpm.jpeg?q=50">
+                <h4>Men Printed<br> Pure Cotton<br> Straight Kurta<br>  (Yellow)</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>Rs-800.00</p>
+            </div>
+            <div class="col-4">
+                <img src="https://rukminim1.flixcart.com/image/495/594/k30h8y80/kurta/3/h/z/xl-kurta-white-elepants-original-imafm8btruemhady.jpeg?q=50">
+                <h4>Men Self<br> Design Pure<br> Cotton Straight<br> Kurta  (White)</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>Rs-600.00</p>
+            </div>
+            <div class="col-4">
+                <img src="https://rukminim1.flixcart.com/image/495/594/k01b8280/kurta/h/s/r/m-mens-kurta-cotton-navy-tap-in-original-imafjwhvzw2wstur.jpeg?q=50">
+                <h4>Men Self Design,<br> Solid Cotton<br> Linen Blend<br> Straight Kurta<br>  (Dark Blue)</h4>
+                <div class="rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
+                </div>
+                <p>Rs-700.00</p>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<!------------------------------footer --------------->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h1>Shopping.in</h1>
+            </div>
+            <div class="fooler-col-3">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blog Post</li>
+                    <li>Return Policy</li>
+                    <li>Join Affiliate</li>
+                </ul>
+            </div>
+            <div class="fooler-col-3">
+                <h3>Follow us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>YouTube</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

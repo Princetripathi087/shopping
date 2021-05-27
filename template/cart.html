@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products |shopping.in</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container"></div>
+    <div class="topnav">
+        <a href="index.html" ><img src="image/2.gif" width="220px" height="40px"></a>
+        <input type="text" placeholder="Search..">
+        <a href="signin.html" ><img src="image/3.jpg" width="150px" height="35px"></a>
+        <a href="cart.html" ><img src="image/1.jpg" width="50px" height="40px"></a>
+      </div>
+    </div>
+    <div class="navbar">
+        <nav>
+            <ul>
+                
+                <li><a href="{% url 'mobile'%}">Mobiles</a></li>
+                <li><a href="{% url 'Product'%}">Fashion</a></li>
+                <li><a href="{% url 'electronics'%}">Electronics</a></li>
+                
+            </ul>
+        </nav>
+    </div>
+
+
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+
+          <img src="Static/img4.jpg" style="width:100%">
+
+        </div>
+
+        <div class="mySlides fade">
+
+          <img src="Static/img2.jpg" style="width:100%">
+
+        </div>
+
+
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+
+      </div>
+      <script>
+      var slideIndex = 1;
+        showSlides(slideIndex);
+
+// Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+// Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+</script>
+
+
+<!---------------------cart items details----------------->
+<div class="small-container cart-page">
+
+
+
+    <table width="900" border = '1'>
+        <tr>
+            <th style="background-color:red;color:white">Product</th>
+        <th style="background-color:red;color:white">Quantity</th>
+        <th style="background-color:red;color:white">Subtotal</th>
+
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="images/1.jpg">
+
+                    <div>
+                        <p>Printed Tshirt</p>
+                        <small>Price: $50.00</small>
+                        <br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>$50</td>
+        </tr>
+         <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="images/1.jpg">
+
+                    <div>
+                        <p>Printed Tshirt</p>
+                        <small>Price: $50.00</small>
+                        <br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>$50</td>
+        </tr>
+         <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="images/1.jpg">
+
+                    <div>
+                        <p>Printed Tshirt</p>
+                        <small>Price: $50.00</small>
+                        <br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>$50</td>
+        </tr>
+    </table>
+    <div class="total-price">
+        <table>
+            <tr>
+                <td>Subtotal</td>
+                <td>$200.00</td>
+            </tr>
+            <tr>
+                <td>Tax</td>
+                <td>$35.00</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>$235.00</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+<!------------------------------footer --------------->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h1>Shopping.in</h1>
+            </div>
+            <div class="fooler-col-3">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blog Post</li>
+                    <li>Return Policy</li>
+                    <li>Join Affiliate</li>
+                </ul>
+            </div>
+            <div class="fooler-col-3">
+                <h3>Follow us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>YouTube</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>
