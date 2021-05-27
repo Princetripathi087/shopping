@@ -1,0 +1,11 @@
+.col-7 img{
+    width: 32%;
+    float: left;
+    margin: 10px 200px 30px 30px;
+
+}
+.col-7 button{
+    color: orange;
+    width: 20%;
+    height: 30px;
+}
