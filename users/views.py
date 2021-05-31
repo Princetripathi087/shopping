@@ -26,6 +26,7 @@ def register(request):
 def cart(request):
     if request.method== 'POST':
         pass
+    
     x = Cart.objects.filter(user_id=request.user.id)
     sum = x.aggregate(Sum('cost'))
     return render(request,'cart.html',{'x':x,'sum':sum})
